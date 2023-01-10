@@ -27,7 +27,7 @@ SmokeBomb::SmokeBomb(GameCore *core,
 void SmokeBomb::Render() {
   if (current_time_ < duration_) {
     SetTransformation(position_, rotation_, glm::vec2{0.5f});
-    // SetColor(game_core_->GetPlayerColor(player_id_));
+    SetColor(glm::vec4{1.0f, 1.0f, 1.0f, 1.0f});
     SetTexture("../../textures/bomb.png");
     DrawModel(0);
   }
