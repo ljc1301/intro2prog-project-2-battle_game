@@ -12,7 +12,7 @@ glm::vec2 current_position_;
 glm::vec2 current_scale_;
 float current_rotation_;
 AssetsManager *mgr{};
-grassland::font::Factory factory{"../../fonts/NotoSansSC-Regular.otf"};
+font::Factory factory{"../../fonts/NotoSansSC-Regular.otf"};
 
 void UpdateObjectSettingsTransformMatrix() {
   current_object_settings_.local_to_world =

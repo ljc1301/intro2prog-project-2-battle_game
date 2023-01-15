@@ -30,14 +30,14 @@ uint32_t GetTexture();
 float GetTextWidth(wchar_t c);
 float GetTextWidth(const std::wstring &text);
 inline float GetTextWidth(const std::string &text) {
-  return GetTextWidth(StringToWideString(text));
+  return GetTextWidth(util::U8StringToWideString(text));
 }
 
 void DrawModel(uint32_t model_id = 0);
 void DrawTexture(const std::string &file_path);
 void DrawText(const std::wstring &text, bool centered = true);
 inline void DrawText(const std::string &text, bool centered = true) {
-  DrawText(StringToWideString(text), centered);
+  DrawText(util::U8StringToWideString(text), centered);
 }
 
 const std::vector<ObjectSettings> &GetObjectSettings();
